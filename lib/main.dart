@@ -9,6 +9,16 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            '#Go To Moon',
+            style: TextStyle(
+                fontSize: 50, fontWeight: FontWeight.bold, color: Colors.white),
+          ),
+        ),
+      ),
+    );
   }
 }
