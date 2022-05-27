@@ -6,9 +6,21 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _astroImageWidget(),
+      body: _pageTitle(),
     );
   }
+
+  Widget _pageTitle() {
+    return const Text(
+      '#GoMoon',
+      style: TextStyle(
+        fontSize: 70,
+        color: Colors.white,
+        fontWeight: FontWeight.w800,
+      ),
+    );
+  }
+
   Widget _astroImageWidget() {
     return Container(
       decoration: const BoxDecoration(
