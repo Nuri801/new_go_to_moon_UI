@@ -13,6 +13,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
+          height: _deviceHeight,
+          width: _deviceWidth,
           child: _pageTitle(),
         ),
       ),
