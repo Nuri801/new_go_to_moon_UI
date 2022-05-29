@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-
   late double _deviceHeight, _deviceWidth;
 
   HomePage({Key? key}) : super(key: key);
@@ -16,7 +15,7 @@ class HomePage extends StatelessWidget {
           height: _deviceHeight,
           width: _deviceWidth,
           padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
-          child: _pageTitle(),
+          child: _destinationDropDownWidget(),
         ),
       ),
     );
@@ -43,7 +42,19 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-  Widget _destinationDropDownWidget () {
-    return Container();
+
+  Widget _destinationDropDownWidget() {
+    List<DropdownMenuItem<String>> _items = [
+      'James Webb Station',
+      'Preneure Station'
+    ].map((e) {
+      return DropdownMenuItem(child: Text(e), value: e,);
+    },).toList();
+    return Container(
+      child: DropdownButton(
+        onChanged: (_) {},
+        items: _items,
+      ),
+    );
   }
 }
