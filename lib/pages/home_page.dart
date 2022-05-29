@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
 
   Widget _destinationDropDownWidget() {
     List<DropdownMenuItem<String>> _items = [
-      'James Webb Station',
+      'NASA',
       'Preneure Station'
     ].map((e) {
       return DropdownMenuItem(child: Text(e), value: e,);
