@@ -15,7 +15,7 @@ class App extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(31, 31, 31, 1)
       ),
       title: 'Go Moon',
-      home: const HomePage()
+      home: HomePage()
     );
   }
 }
