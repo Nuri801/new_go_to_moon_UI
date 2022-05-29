@@ -43,4 +43,7 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+  Widget _destinationDropDownWidget () {
+    return Container();
+  }
 }
