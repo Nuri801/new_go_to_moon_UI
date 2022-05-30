@@ -17,6 +17,7 @@ class HomePage extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
             children: [
               _pageTitle(),
               // _astroImageWidget(),
