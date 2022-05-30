@@ -12,20 +12,19 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          height: _deviceHeight,
-          width: _deviceWidth,
-          padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _pageTitle(),
-              // _astroImageWidget(),
-              _destinationDropDownWidget()
-            ],
-          )
-        ),
+            height: _deviceHeight,
+            width: _deviceWidth,
+            padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _pageTitle(),
+                // _astroImageWidget(),
+                _destinationDropDownWidget()
+              ],
+            )),
       ),
     );
   }
@@ -53,16 +52,33 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _destinationDropDownWidget() {
-    List<String> _items = [
-      'NASA',
-      'Preneure Station'
-    ];
+    List<String> _items = ['ISS', 'Preneure Station'];
     return Container(
+      decoration: BoxDecoration(
+        color: const Color.fromRGBO(
+          53,
+          53,
+          53,
+          1.0,
+        ),
+        borderRadius: BorderRadius.circular(10),
+      ),
       child: DropdownButton(
+        value: _items.first,
         onChanged: (_) {},
-        items: _items.map((e) {
-          return DropdownMenuItem(child: Text(e), value: e,);
-        },).toList(),
+        items: _items.map(
+          (e) {
+            return DropdownMenuItem(
+              child: Text(e),
+              value: e,
+            );
+          },
+        ).toList(),
+        underline: Container(),
+        dropdownColor: Colors.grey,
+        style: const TextStyle(
+          color: Colors.white,
+        ),
       ),
     );
   }
