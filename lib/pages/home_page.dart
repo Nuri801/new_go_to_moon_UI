@@ -53,16 +53,16 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _destinationDropDownWidget() {
-    List<DropdownMenuItem<String>> _items = [
+    List<String> _items = [
       'NASA',
       'Preneure Station'
-    ].map((e) {
-      return DropdownMenuItem(child: Text(e), value: e,);
-    },).toList();
+    ];
     return Container(
       child: DropdownButton(
         onChanged: (_) {},
-        items: _items,
+        items: _items.map((e) {
+          return DropdownMenuItem(child: Text(e), value: e,);
+        },).toList(),
       ),
     );
   }
