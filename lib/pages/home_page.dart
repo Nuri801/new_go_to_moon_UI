@@ -22,7 +22,9 @@ class HomePage extends StatelessWidget {
               children: [
                 _pageTitle(),
                 // _astroImageWidget(),
-                DropDownWidget(items: ['ISS', 'Preneure Station'])
+                DropDownWidget(items: ['ISS', 'Preneure Station']),
+                DropDownWidget(items: ['1', '2', '3', '4']),
+                DropDownWidget(items: ['Economy', 'Business', 'Luxury'])
               ],
             )),
       ),
