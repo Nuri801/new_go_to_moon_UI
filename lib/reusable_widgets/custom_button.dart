@@ -18,24 +18,22 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(5.0),
-      child: Material(
-        elevation: 5.0,
+      child: MaterialButton(
         color: color,
-        child: MaterialButton(
-          onPressed: onPressed,
-          minWidth: 200,
-          height: 40.0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                buttonName,
-                style: TextStyle(
-                    color: textColor
-                ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.0))),
+        onPressed: onPressed,
+        minWidth: 200,
+        height: 50.0,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text(
+              buttonName,
+              style: TextStyle(
+                  color: textColor
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

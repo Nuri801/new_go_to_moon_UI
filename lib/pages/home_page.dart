@@ -23,14 +23,27 @@ class HomePage extends StatelessWidget {
             children: [
               _pageTitle(),
               // _astroImageWidget(),
-              DropDownWidget(items: ['ISS', 'Preneure Station']),
-              DropDownWidget(items: ['1', '2', '3', '4']),
-              DropDownWidget(items: ['Economy', 'Business', 'Luxury']),
-              CustomButton(
-                color: Colors.white,
-                textColor: Colors.black,
-                onPressed: () {},
-                buttonName: 'Book Ride!',
+              Column(
+                children: [
+                  DropDownWidget(items: ['ISS', 'Preneure Station'], width: _deviceWidth),
+                  SizedBox(height: 10),
+                  Row(
+                    children: [
+                      DropDownWidget(items: ['1', '2', '3', '4'], width: _deviceWidth * 0.42),
+                      SizedBox(width: _deviceWidth * 0.05),
+                      DropDownWidget(items: ['Economy', 'Business', 'Luxury'], width: _deviceWidth * 0.43),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: CustomButton(
+                      color: Colors.white,
+                      textColor: Colors.black,
+                      onPressed: () {},
+                      buttonName: 'Book Ride!',
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -61,11 +74,11 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget DropDownWidget({required List<String> items}) {
+  Widget DropDownWidget({required List<String> items, required double width}) {
     List<String> _items = items;
     return Container(
       padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
-      width: _deviceWidth,
+      width: width,
       decoration: BoxDecoration(
         color: const Color.fromRGBO(
           53,
