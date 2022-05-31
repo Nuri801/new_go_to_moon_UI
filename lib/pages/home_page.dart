@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_to_moon_ui/reusable_widgets/custom_button.dart';
 
 class HomePage extends StatelessWidget {
   late double _deviceHeight, _deviceWidth;
@@ -12,22 +13,28 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-            height: _deviceHeight,
-            width: _deviceWidth,
-            padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _pageTitle(),
-                // _astroImageWidget(),
-                DropDownWidget(items: ['ISS', 'Preneure Station']),
-                DropDownWidget(items: ['1', '2', '3', '4']),
-                DropDownWidget(items: ['Economy', 'Business', 'Luxury']),
-                bookButton()
-              ],
-            )),
+          height: _deviceHeight,
+          width: _deviceWidth,
+          padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _pageTitle(),
+              // _astroImageWidget(),
+              DropDownWidget(items: ['ISS', 'Preneure Station']),
+              DropDownWidget(items: ['1', '2', '3', '4']),
+              DropDownWidget(items: ['Economy', 'Business', 'Luxury']),
+              CustomButton(
+                color: Colors.white,
+                textColor: Colors.black,
+                onPressed: () {},
+                buttonName: 'Book Ride!',
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -90,15 +97,15 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget bookButton() {
-    return TextButton(
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(Colors.white),
-      ),
-      onPressed: () {},
-      child: const Text('Book Ride!', style: TextStyle(
-        color: Colors.black
-      ),),
-    );
-  }
+  // Widget bookButton() {
+  //   return TextButton(
+  //     style: ButtonStyle(
+  //       backgroundColor: MaterialStateProperty.all(Colors.white),
+  //     ),
+  //     onPressed: () {},
+  //     child: const Text('Book Ride!', style: TextStyle(
+  //       color: Colors.black
+  //     ),),
+  //   );
+  // }
 }
