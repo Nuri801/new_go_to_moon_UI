@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
               children: [
                 _pageTitle(),
                 // _astroImageWidget(),
-                _destinationDropDownWidget()
+                DropDownWidget(items: ['ISS', 'Preneure Station'])
               ],
             )),
       ),
@@ -51,8 +51,8 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _destinationDropDownWidget() {
-    List<String> _items = ['ISS', 'Preneure Station'];
+  Widget DropDownWidget({required List<String> items}) {
+    List<String> _items = items;
     return Container(
       padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
       width: _deviceWidth,
