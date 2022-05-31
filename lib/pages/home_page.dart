@@ -24,7 +24,8 @@ class HomePage extends StatelessWidget {
                 // _astroImageWidget(),
                 DropDownWidget(items: ['ISS', 'Preneure Station']),
                 DropDownWidget(items: ['1', '2', '3', '4']),
-                DropDownWidget(items: ['Economy', 'Business', 'Luxury'])
+                DropDownWidget(items: ['Economy', 'Business', 'Luxury']),
+                bookButton()
               ],
             )),
       ),
@@ -86,6 +87,18 @@ class HomePage extends StatelessWidget {
           color: Colors.white,
         ),
       ),
+    );
+  }
+
+  Widget bookButton() {
+    return TextButton(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.white),
+      ),
+      onPressed: () {},
+      child: const Text('Book Ride!', style: TextStyle(
+        color: Colors.black
+      ),),
     );
   }
 }
