@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
                       color: Colors.white,
                       textColor: Colors.black,
                       onPressed: () {},
-                      buttonName: 'Book Ride!',
+                      buttonName: 'Book Travel!',
                     ),
                   ),
                 ],
