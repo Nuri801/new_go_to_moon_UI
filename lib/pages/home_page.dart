@@ -35,9 +35,9 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(18),
+                    padding: const EdgeInsets.only(bottom: 5, top: 18),
                     child: CustomButton(
-                      // width: deviceWidth,
+                      width: deviceWidth,
                       color: Colors.white,
                       textColor: Colors.black,
                       onPressed: () {},
