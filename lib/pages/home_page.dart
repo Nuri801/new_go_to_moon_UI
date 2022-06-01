@@ -50,9 +50,13 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              _astroImageWidget()
+              Row(
+                children: [
+                  _astroImageWidget(),
+                ],
+              )
             ],
-          )
+          ),
         ),
       ),
     );
@@ -73,7 +77,7 @@ class HomePage extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          fit: BoxFit.fill,
+          fit: BoxFit.scaleDown,
           image: AssetImage('assets/images/img.png'),
         ),
       ),
