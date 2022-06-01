@@ -26,16 +26,16 @@ class HomePage extends StatelessWidget {
               Column(
                 children: [
                   DropDownWidget(items: ['ISS', 'Preneure Station'], width: _deviceWidth),
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       DropDownWidget(items: ['1', '2', '3', '4'], width: _deviceWidth * 0.42),
-                      SizedBox(width: _deviceWidth * 0.05),
                       DropDownWidget(items: ['Economy', 'Business', 'Luxury'], width: _deviceWidth * 0.43),
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(18),
                     child: CustomButton(
                       color: Colors.white,
                       textColor: Colors.black,
