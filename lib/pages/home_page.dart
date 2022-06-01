@@ -16,38 +16,43 @@ class HomePage extends StatelessWidget {
           height: _deviceHeight,
           width: deviceWidth,
           padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.05),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Stack(
             children: [
-              _pageTitle(),
-              // _astroImageWidget(),
               Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  DropDownWidget(items: ['ISS', 'Preneure Station'], width: deviceWidth),
-                  SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  _pageTitle(),
+                  // _astroImageWidget(),
+                  Column(
                     children: [
-                      DropDownWidget(items: ['1', '2', '3', '4'], width: deviceWidth * 0.42),
-                      DropDownWidget(items: ['Economy', 'Business', 'Luxury'], width: deviceWidth * 0.43),
+                      DropDownWidget(items: ['Preneure Station', 'ISS',], width: deviceWidth),
+                      SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          DropDownWidget(items: ['1', '2', '3', '4'], width: deviceWidth * 0.42),
+                          DropDownWidget(items: ['Economy', 'Business', 'Luxury'], width: deviceWidth * 0.43),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 5, top: 18),
+                        child: CustomButton(
+                          width: deviceWidth,
+                          color: Colors.white,
+                          textColor: Colors.black,
+                          onPressed: () {},
+                          buttonName: 'Book Travel!',
+                        ),
+                      ),
                     ],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 5, top: 18),
-                    child: CustomButton(
-                      width: deviceWidth,
-                      color: Colors.white,
-                      textColor: Colors.black,
-                      onPressed: () {},
-                      buttonName: 'Book Travel!',
-                    ),
                   ),
                 ],
               ),
+              _astroImageWidget()
             ],
-          ),
+          )
         ),
       ),
     );
