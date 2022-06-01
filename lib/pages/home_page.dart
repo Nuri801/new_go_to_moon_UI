@@ -12,13 +12,13 @@ class HomePage extends StatelessWidget {
     deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          height: _deviceHeight,
-          width: deviceWidth,
-          padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.05),
-          child: Stack(
-            children: [
-              Column(
+        child: Stack(
+          children: [
+            Container(
+              height: _deviceHeight,
+              width: deviceWidth,
+              padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.05),
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,13 +50,12 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
-                children: [
-                  _astroImageWidget(),
-                ],
-              )
-            ],
-          ),
+            ),
+            Align(
+              alignment: Alignment.centerRight,
+              child:_astroImageWidget(),
+            )
+          ],
         ),
       ),
     );
@@ -77,7 +76,7 @@ class HomePage extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          fit: BoxFit.scaleDown,
+          // fit: BoxFit.scaleDown,
           image: AssetImage('assets/images/img.png'),
         ),
       ),
@@ -119,16 +118,4 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-
-  // Widget bookButton() {
-  //   return TextButton(
-  //     style: ButtonStyle(
-  //       backgroundColor: MaterialStateProperty.all(Colors.white),
-  //     ),
-  //     onPressed: () {},
-  //     child: const Text('Book Ride!', style: TextStyle(
-  //       color: Colors.black
-  //     ),),
-  //   );
-  // }
 }
