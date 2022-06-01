@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:go_to_moon_ui/pages/home_page.dart';
+
+
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
     Key? key,
+    // required this.width,
     required this.color,
     required this.textColor,
     required this.buttonName,
     required this.onPressed,
   }) : super(key: key);
 
+  // final double width;
   final Color color;
   final Color textColor;
   final String buttonName;

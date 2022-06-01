@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:go_to_moon_ui/reusable_widgets/custom_button.dart';
 
 class HomePage extends StatelessWidget {
-  late double _deviceHeight, _deviceWidth;
+  late double _deviceHeight, deviceWidth;
 
   HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     _deviceHeight = MediaQuery.of(context).size.height;
-    _deviceWidth = MediaQuery.of(context).size.width;
+    deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
         child: Container(
           height: _deviceHeight,
-          width: _deviceWidth,
-          padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
+          width: deviceWidth,
+          padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.05),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
@@ -25,18 +25,19 @@ class HomePage extends StatelessWidget {
               // _astroImageWidget(),
               Column(
                 children: [
-                  DropDownWidget(items: ['ISS', 'Preneure Station'], width: _deviceWidth),
+                  DropDownWidget(items: ['ISS', 'Preneure Station'], width: deviceWidth),
                   SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      DropDownWidget(items: ['1', '2', '3', '4'], width: _deviceWidth * 0.42),
-                      DropDownWidget(items: ['Economy', 'Business', 'Luxury'], width: _deviceWidth * 0.43),
+                      DropDownWidget(items: ['1', '2', '3', '4'], width: deviceWidth * 0.42),
+                      DropDownWidget(items: ['Economy', 'Business', 'Luxury'], width: deviceWidth * 0.43),
                     ],
                   ),
                   Padding(
                     padding: const EdgeInsets.all(18),
                     child: CustomButton(
+                      // width: deviceWidth,
                       color: Colors.white,
                       textColor: Colors.black,
                       onPressed: () {},
@@ -77,7 +78,7 @@ class HomePage extends StatelessWidget {
   Widget DropDownWidget({required List<String> items, required double width}) {
     List<String> _items = items;
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
+      padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.05),
       width: width,
       decoration: BoxDecoration(
         color: const Color.fromRGBO(
