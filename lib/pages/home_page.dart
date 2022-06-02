@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
         child: Stack(
           children: [
             Container(
+              // color: Colors.red,
               height: _deviceHeight,
               width: deviceWidth,
               padding: EdgeInsets.symmetric(horizontal: deviceWidth * 0.05),
@@ -27,13 +28,21 @@ class HomePage extends StatelessWidget {
                   // _astroImageWidget(),
                   Column(
                     children: [
-                      DropDownWidget(items: ['Preneure Station', 'ISS', 'Occupy Mars Station'], width: deviceWidth),
+                      DropDownWidget(items: [
+                        'Preneure Station',
+                        'ISS',
+                        'Occupy Mars Station'
+                      ], width: deviceWidth),
                       SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          DropDownWidget(items: ['1', '2', '3', '4', 'more than 4'], width: deviceWidth * 0.42),
-                          DropDownWidget(items: ['Economy', 'Business', 'Luxury'], width: deviceWidth * 0.43),
+                          DropDownWidget(
+                              items: ['1', '2', '3', '4', 'more than 4'],
+                              width: deviceWidth * 0.42),
+                          DropDownWidget(
+                              items: ['Economy', 'Business', 'Luxury'],
+                              width: deviceWidth * 0.43),
                         ],
                       ),
                       Padding(
@@ -51,10 +60,11 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            Align(
-              alignment: Alignment.centerRight,
-              child:_astroImageWidget(),
-            )
+            Positioned(
+              left: 0,
+              right: 0,
+              child: _astroImageWidget()
+            ),
           ],
         ),
       ),
