@@ -60,10 +60,9 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            Positioned(
-              left: 0,
-              right: 0,
-              child: _astroImageWidget()
+            Align(
+              alignment: Alignment.centerRight,
+              child: _astroImageWidget(),
             ),
           ],
         ),
@@ -84,9 +83,11 @@ class HomePage extends StatelessWidget {
 
   Widget _astroImageWidget() {
     return Container(
+      height: 439,
+      width: 265,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          // fit: BoxFit.scaleDown,
+          // fit: BoxFit.,
           image: AssetImage('assets/images/img.png'),
         ),
       ),
