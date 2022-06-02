@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          DropDownWidget(items: ['1', '2', '3', '4'], width: deviceWidth * 0.42),
+                          DropDownWidget(items: ['1', '2', '3', '4', 'more than 4'], width: deviceWidth * 0.42),
                           DropDownWidget(items: ['Economy', 'Business', 'Luxury'], width: deviceWidth * 0.43),
                         ],
                       ),
@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
 
   Widget _pageTitle() {
     return const Text(
-      '#GoToMoon',
+      '#GoMoon',
       style: TextStyle(
         fontSize: 70,
         color: Colors.white,
