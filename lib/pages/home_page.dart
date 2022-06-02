@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                   // _astroImageWidget(),
                   Column(
                     children: [
-                      DropDownWidget(items: ['Preneure Station', 'ISS',], width: deviceWidth),
+                      DropDownWidget(items: ['Preneure Station', 'ISS', 'Occupy Mars Station'], width: deviceWidth),
                       SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
