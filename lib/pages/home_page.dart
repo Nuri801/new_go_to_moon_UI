@@ -31,7 +31,8 @@ class HomePage extends StatelessWidget {
                       DropDownWidget(items: [
                         'Preneure Station',
                         'ISS',
-                        'Occupy Mars Station'
+                        'Occupy Mars Station',
+                        'The China Station'
                       ], width: deviceWidth),
                       SizedBox(height: 20),
                       Row(
@@ -72,7 +73,7 @@ class HomePage extends StatelessWidget {
 
   Widget _pageTitle() {
     return const Text(
-      '#GoToMoon',
+      '#GoMoon',
       style: TextStyle(
         fontSize: 70,
         color: Colors.white,
