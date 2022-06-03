@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                               items: ['1', '2', '3', '4', 'more than 4'],
                               width: deviceWidth * 0.42),
                           DropDownWidget(
-                              items: ['Economy', 'Business', 'Luxury'],
+                              items: ['Economy', 'Business', 'Luxury', 'Steering wheel'],
                               width: deviceWidth * 0.43),
                         ],
                       ),
