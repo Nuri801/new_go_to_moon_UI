@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           DropDownWidget(
-                              items: ['1', '2', '3', '4', 'more than 4'],
+                              items: ['1', '2', '3', '4'],
                               width: deviceWidth * 0.42),
                           DropDownWidget(
                               items: ['Economy', 'Business', 'Luxury'],
