@@ -30,7 +30,6 @@ class HomePage extends StatelessWidget {
                     children: [
                       DropDownWidget(items: [
                         'Preneure Station',
-                        'ISS',
                         'Occupy Mars Station',
                         'International Space Station'
                       ], width: deviceWidth),
