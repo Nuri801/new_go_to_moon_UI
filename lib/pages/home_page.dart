@@ -32,6 +32,7 @@ class HomePage extends StatelessWidget {
                         'Preneure Station',
                         'Elon Musk Station',
                         "International Space Station"
+                        "The Mars Station"
                       ], width: deviceWidth),
                       SizedBox(height: 20),
                       Row(
